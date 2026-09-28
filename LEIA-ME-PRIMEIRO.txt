@@ -1,0 +1,16 @@
+BODY LAB - AVALIACAO FISICA E RELATORIOS
+
+1. Para atualizar sem digitar a chave de novo, feche o Body Lab aberto (Ctrl+C na janela preta) e extraia o ZIP por cima da pasta atual, substituindo os arquivos existentes. O arquivo .env fica preservado. Se usar uma pasta nova, copie o .env da pasta atual para ela.
+2. Abra INICIAR.bat. O navegador abre http://localhost:8080.
+3. A avaliacao por medidas funciona sem chave de IA: menu Composicao corporal. Preencha dados, calcule e clique BAIXAR PDF DA AVALIACAO.
+4. A comparacao por fotos funciona no menu Nova avaliacao visual: seis fotos dos mesmos angulos (frente, lateral e costas em dois periodos). Ajuste as marcacoes com o mouse ou toque; adicione guia postural para alinhar ombros e eixo corporal. Baixe as imagens marcadas ou o PDF visual depois de revisar.
+5. Para analisar as fotos com IA, configure sua propria OPENROUTER_API_KEY no .env. Nao copie o .env antigo de outro provedor. Use o arquivo criado pelo INICIAR.bat e substitua apenas COLE_SUA_CHAVE_OPENROUTER_AQUI pela chave da OpenRouter. Nao publique nem envie o .env. O INICIAR.bat cria e abre esse arquivo na primeira execucao. O .env nao acompanha este ZIP.
+
+O percentual gerado pelos metodos de circunferencias e sete dobras e uma ESTIMATIVA e requer afericoes corretas. Foto nao calcula percentual de gordura nem diagnostica escoliose, lordose ou lesoes. A posicao de marcacoes sugeridas por IA e aproximada: confira e ajuste antes de enviar ao aluno. O PDF inclui somente os dados que voce preencheu. Os PDFs e as imagens sao salvos na pasta Downloads do navegador.
+
+As formulas de sete dobras seguem Jackson, Pollock e Ward, com conversao de Siri; o metodo de circunferencias da Marinha usa centimetros convertidos para polegadas na equacao Hodgdon-Beckett. Esta ferramenta e para acompanhamento feito por profissional e nao substitui avaliacao clinica.
+
+NA AVALIACAO POR MEDIDAS: escolha o metodo no seletor. Em sete dobras, as 7 dobras (mm) aparecem junto das circunferencias opcionais (cm). Circunferencias sao exibidas no PDF, nao interferem no percentual das sete dobras.
+NA IA: a analise corporal usa google/gemini-2.5-flash pela OpenRouter. O Future Body usa google/gemini-3.1-flash-image para editar as tres fotos de referencia. A projecao gera tres imagens e pode consumir saldo da OpenRouter conforme o preco atual do modelo. O Future Body redimensiona as fotos antes do envio; revise as imagens e nao interprete os kg ou o percentual do prompt como uma medida exata calculada pela foto.
+
+FUTURE BODY: envie uma foto de frente, uma de lado e uma de costas. Escreva a transformacao desejada e clique em GERAR AS 3 IMAGENS. Quando concluir, baixe o PDF com resumo e imagens. Para manter sua chave ao atualizar, extraia os arquivos novos por cima da mesma pasta, sem apagar o .env.
