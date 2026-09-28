@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: body-lab-wisley
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: OPENROUTER_MODEL
+        value: google/gemini-2.5-flash
+      - key: OPENROUTER_IMAGE_MODEL
+        value: google/gemini-3.1-flash-image
+      - key: APP_PASSWORD
+        sync: false
+      - key: APP_SESSION_SECRET
+        generateValue: true
